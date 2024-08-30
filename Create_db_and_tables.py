@@ -42,6 +42,8 @@ table_commands = [
         metadata TEXT,
         FOREIGN KEY (study_id) REFERENCES studies (study_id)
     )
+    # CREATE INDEX idx_study_id ON runs (study_id); 
+    # CREATE INDEX idx_condition ON runs (condition);
     ''',
     '''
     CREATE TABLE study_species (
