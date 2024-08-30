@@ -19,8 +19,8 @@ def split_dataframe(df_de, group_size=2):
 
     for i in range(0, len(cols), group_size):
         group_cols = cols[i:i + group_size]
-        new_df = df_de[group_cols].copy()  # **[NEW] Create a copy of the DataFrame for safe manipulation**
-        new_df.reset_index(inplace=True)   # **[NEW] Turn the index into a column**
+        new_df = df_de[group_cols].copy()  # Create a copy of the DataFrame for safe manipulation**
+        new_df.reset_index(inplace=True)   # Turn the index into a column**
         df_name = f'df_de{i // group_size + 1}'
         df_names.append((df_name, new_df))
     
