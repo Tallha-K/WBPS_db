@@ -18,20 +18,6 @@ table_commands = [
         species_name TEXT UNIQUE NOT NULL,
         alternative_species_id TEXT UNIQUE
     )
-    ''',
-    '''
-    CREATE TABLE differential_expression (
-        gene_id TEXT,
-        log2FoldChange FLOAT, 
-        adj_p_value FLOAT,  
-        condition_1 INTEGER,  
-        condition_2 INTEGER, 
-        study_id TEXT,
-        FOREIGN KEY (gene_id) REFERENCES genes (gene_id),
-        FOREIGN KEY (condition_1) REFERENCES runs (condition),
-        FOREIGN KEY (condition_2) REFERENCES runs (condition),
-        FOREIGN KEY (study_id) REFERENCES studies (study_id)
-    )
     '''
 ]
 
