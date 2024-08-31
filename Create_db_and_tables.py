@@ -20,48 +20,6 @@ table_commands = [
     )
     ''',
     '''
-    CREATE TABLE studies (
-        study_id TEXT PRIMARY KEY,
-        study_category TEXT,
-        study_name TEXT,
-        link TEXT
-    )
-    ''',
-    '''
-    CREATE TABLE genes (
-        gene_id TEXT PRIMARY KEY,
-        species_id TEXT,
-        FOREIGN KEY (species_id) REFERENCES species (species_id)
-    )
-    ''',
-    '''
-    CREATE TABLE runs (
-        run_id TEXT PRIMARY KEY,
-        condition TEXT,
-        study_id TEXT,
-        metadata TEXT,
-        FOREIGN KEY (study_id) REFERENCES studies (study_id)
-    )
-    ''',
-    '''
-    CREATE TABLE study_species (
-        study_id TEXT,
-        species_id TEXT,
-        FOREIGN KEY (study_id) REFERENCES studies (study_id),
-        FOREIGN KEY (species_id) REFERENCES species (species_id)
-    )
-    ''',
-    '''
-    CREATE TABLE run_genes (
-        run_id TEXT,
-        gene_id TEXT,
-        count_value FLOAT,
-        tpm_value FLOAT,
-        FOREIGN KEY (run_id) REFERENCES runs (run_id),
-        FOREIGN KEY (gene_id) REFERENCES genes (gene_id)
-    )
-    ''',
-    '''
     CREATE TABLE differential_expression (
         gene_id TEXT,
         log2FoldChange FLOAT, 
