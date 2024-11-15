@@ -9,7 +9,7 @@ This repository contains Python scripts developed as part of my Bioinformatics M
 ### 1. **Production_Code**
    - **create_database_and_tables.py**: This script initializes a database and creates the necessary tables to store biological data.
    - **populate_database_schema.py**: This script populates the database with schema and initial data, preparing it for further analysis.
-   - **loaders/**: This directory contains various data loader scripts that are responsible for importing and organizing different types of biological data into the database.
+   - **loaders**: This directory contains various data loader scripts that are responsible for importing and organizing different types of biological data into the database.
 
 ### 2. **Loaders**
    - **species_data_loader.py**: Loads species-related data into the database.
